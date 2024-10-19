@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anemia Detection App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+
+    <h1>Anemia Detection App / అనీమియా గుర్తింపు యాప్</h1>
+
+    <!-- Form to input details -->
+    <form id="anemia-form">
+        <label for="age">Enter your age (1-80 years) / మీ వయస్సు నమోదు చేయండి (1-80 సంవత్సరాలు):</label>
+        <input type="number" id="age" name="age" min="1" max="80" required><br>
+
+        <h3>Select your symptoms / మీ లక్షణాలను ఎంపిక చేయండి:</h3>
+        <label><input type="checkbox" id="symptom-fatigue"> Fatigue / అలసట</label><br>
+        <label><input type="checkbox" id="symptom-pale"> Pale skin / పసుపు చర్మం</label><br>
+        <label><input type="checkbox" id="symptom-breath"> Shortness of breath / శ్వాసకోశ సంబంధిత సమస్యలు</label><br>
+        <label><input type="checkbox" id="symptom-dizzy"> Dizziness / తలనొప్పి</label><br>
+
+        <label for="nail-photo">Upload Nail Photo / నఖ ఫోటో అప్‌లోడ్ చేయండి:</label>
+        <input type="file" id="nail-photo" name="nail-photo" accept="image/*" required><br>
+
+        <label for="eye-photo">Upload Eye Photo / కంటి ఫోటో అప్‌లోడ్ చేయండి:</label>
+        <input type="file" id="eye-photo" name="eye-photo" accept="image/*" required><br>
+
+        <button type="submit">Check for Anemia / అనీమియా కోసం చెక్ చేయండి</button>
+    </form>
+
+    <!-- Output results -->
+    <div id="result">
+        <h2 id="diagnosis"></h2>
+        <p id="hemoglobin-range"></p>
+        <h3>What is Anemia? / అనీమియా ఏమిటి?</h3>
+        <p id="anemia-description"></p>
+        <p id="anemia-description-telugu"></p>
+        
+        <h3>Symptoms / లక్షణాలు</h3>
+        <ul id="symptoms"></ul>
+
+        <h3>Foods to Cure Anemia / అనీమియాను తగ్గించడానికి ఆహారాలు</h3>
+        <ul id="food-list"></ul>
+
+        <h3>Exercises to Overcome Anemia / అనీమియాను అధిగమించడానికి వ్యాయామాలు</h3>
+        <ul id="exercise-list"></ul>
+    </div>
+
+    
+
+</body>
+</html>
